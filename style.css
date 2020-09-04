@@ -1,0 +1,56 @@
+body {
+    background-color: #f8f8f8;
+}
+
+footer{
+    vertical-align: bottom;
+}
+
+.fare {
+    border: 2px solid lightgray; 
+    border-radius: 3px;
+    padding: 10px;
+    background-color: white;
+    text-align: 100%;
+    margin: 20px;
+    font-family: "Arial";
+}
+
+.company {
+    padding-bottom: 200px;
+}
+
+.time
+{
+    font-size: 28px;
+    text-align: left;
+}
+
+.place, .date {
+    font-size: 12px;
+    color: lightslategray;
+}
+
+.departure
+{
+    text-align: left;
+}
+
+.arrival
+{
+    text-align: right;
+}
+
+.fare-route {
+    width: 200px;
+}
+
+.button-select {
+    border-radius: 5px;
+    color: white;
+    background-color: orangered;
+    padding: 5px 10px;
+    margin: 20px;
+    width: 100px;
+    text-align: center;
+}
