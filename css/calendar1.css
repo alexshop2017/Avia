@@ -1,0 +1,107 @@
+/*
+form {
+}
+*/
+
+.month-combo
+{
+    text-align: center;
+}
+
+tr.month-combo td
+{
+    padding-bottom: 10px;
+}
+
+select.month-list
+{
+    border: none;
+    outline: none;
+}
+
+.month-left
+{
+    padding-right: 5px;
+}
+.month-right
+{
+    padding-left: 5px;
+}
+
+.day
+{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+/*
+.today
+{
+    border: 1px dotted #0000FF;
+    border-radius: 5px;
+    padding : 5px;
+}
+*/
+
+.day1-selected
+{
+    border: 1px solid #0000FF;
+    background-color: #0000FF;
+    color: white;
+    border-radius: 5px;
+    padding : 5px;
+}
+
+.day-filled:hover
+{
+    background-color: lightblue;
+    border: 1px solid #0000FF;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.button-bottom
+{
+    text-align: center;
+}
+
+tr.button-bottom
+{
+    border-top: gray;
+    border: 1px solid;
+}
+
+.button-bottom td
+{
+    padding-top: 10px;
+}
+
+.button-bottom button
+{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    border-color: blue;
+    padding: 5px 10px;
+}
+
+.calendar-without-left-right-buttons
+{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #cccccc;
+    padding: 15px 10px;
+}
+
+.button-clear button
+{
+    display: none;
+}
+
+.button-month button
+{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+}

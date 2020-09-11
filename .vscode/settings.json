@@ -1,7 +1,7 @@
 {
-    "liveServer.settings.useBrowserPreview": true,
     "liveServer.settings.proxy": {
         "baseUri": "/avia.html"
     },
-    "liveServer.settings.port": 0
+    "liveServer.settings.port": 0,
+    "liveServer.settings.CustomBrowser": "chrome"
 }
