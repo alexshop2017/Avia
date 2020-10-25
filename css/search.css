@@ -1,0 +1,146 @@
+:root
+{
+    --search-background-color: dodgerblue;
+    --search-text-color: #FFFFFF;
+}
+
+.search-body {
+    display: grid;
+    grid-template-columns: 1fr 1330px 1fr;
+}
+
+.search-header,
+.search-main,
+.search-footer {
+    grid-column: 2 / 3;
+}
+
+.search-header-background-left {
+    grid-column: 1 / 2;
+}
+
+.search-header-background-right {
+    grid-column: 3 / 4;
+}
+
+.search-header-background {
+    background-color: var(--search-background-color);
+}
+
+.search-header {
+    color: var(--search-text-color);
+    background-color: var(--search-background-color);
+}
+
+.search-header li {
+    list-style-type: none;
+}
+
+.header-menu-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-menu-item {
+    display: flex;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--search-text-color);
+    background-color: var(--search-background-color);
+    height: 100vh;
+}
+
+.search-main-background-left {
+    grid-column: 1 / 2;
+    background-color: var(--search-background-color);
+}
+
+.search-main-background-right {
+    grid-column: 3 / 4;
+    background-color: var(--search-background-color);
+}
+
+/* search controls grid */
+
+.search-main-controls {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.departure-point-prefix-text {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.departure-point-input {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.arrival-point-prefix-text {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.arrival-point-input {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.departure-date-prefix-text {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.departure-date-input {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.arrival-date-prefix-text {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+}
+
+.arrival-date-input {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+}
+
+.passengers-and-class-combo-prefix-text {
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+}
+
+.passengers-and-class-combo {
+    grid-row: 2 / 3;
+    grid-column: 5 / 6;
+}
+
+.search-button {
+    grid-row: 2 / 3;
+    grid-column: 6 / 7;
+}
+
+.before-search-area {
+    height: 28vh;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.after-search-area {
+    height: 72vh;
+    flex-grow: 1;
+    flex-shrink: 1;
+}

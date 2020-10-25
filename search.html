@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head lang="ru">
+<html class="search-page" lang="ru">
+  <head>
     <meta charset="utf-8">
     <meta name="keywords" content="авиа, билеты">
     <meta name="description" content="Поиск авиабилетов">
-    <link href="css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/search.css">
     <title>Avia</title>
   </head>
-  <body>
-    <header>
+
+  <body class="search-body">
+    <div class="search-header-background-left search-header-background"></div>
+    <header class="search-header">
+      <!--Логотип-->
+      <ol class="header-menu-list">
+        <li class="header-menu-item">День/Ночь</li>
+        <li class="header-menu-item">Валюта</li>
+        <li class="header-menu-item">Страна</li>
+      </ol>
     </header>
-    <main>
-
+    <div class="search-header-background-right search-header-background"></div>
+    
+    <div class="search-main-background-left"></div>
+    
+    <main class="search-main">
+      <section class="search-section">
+        <div class="before-search-area"></div>
+        <h1>Поиск авиабилетов</h1>
+  <!--
+        <h2>Умный поиск билетов</h2>
+  -->
+        <div class="search-main-controls">
+          <p class="departure-point-prefix-text">Откуда</p>
+          <input type="text" class="departure-point-input" placeholder="Откуда"></input>
+          
+          <p class="arrival-point-prefix-text">Куда</p>
+          <input type="text" class="arrival-point-input" placeholder="Куда"></input>
+          
+          <p class="departure-date-prefix-text">Туда</p>
+          <input type="text" class="departure-date-input" placeholder="Туда"></input>
+          
+          <p class="arrival-date-prefix-text">Обратно</p>
+          <input type="text" class="arrival-date-input" placeholder="Обратно"></input>
+          
+          <p class="passengers-and-class-combo-prefix-text">Пассажиры и класс</p>
+          <button type="combo" class="passengers-and-class-combo"></input>
+          
+          <button type="submit" class="search-button">Найти билеты</button>
+        </div>
+        <div class="after-search-area"></div>
+      </section>
     </main>
-  </body>
-</html>
+    <div class="search-main-background-right"></div>
+    
+    <footer class="search-footer">
 
-<!--
-caniinclude.glitch.me
--->
+    </footer>
+  </body>
+
+ </html>
