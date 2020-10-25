@@ -75,7 +75,8 @@
 .search-main-controls {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
 }
 
 .departure-point-prefix-text {
@@ -129,8 +130,7 @@
 }
 
 .search-button {
-    grid-row: 2 / 3;
-    grid-column: 6 / 7;
+    align-self: flex-end;
 }
 
 .before-search-area {
