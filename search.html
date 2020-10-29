@@ -4,57 +4,69 @@
     <meta charset="utf-8">
     <meta name="keywords" content="авиа, билеты">
     <meta name="description" content="Поиск авиабилетов">
+    <!--
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic;display=swap">
+    -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/search.css">
     <title>Avia</title>
   </head>
 
   <body class="search-body">
-    <div class="search-header-background-left search-header-background"></div>
     <header class="search-header">
-      <!--Логотип-->
-      <ol class="header-menu-list">
-        <li class="header-menu-item">День/Ночь</li>
-        <li class="header-menu-item">Валюта</li>
-        <li class="header-menu-item">Страна</li>
-      </ol>
+      <!--TODO: Логотип-->
+      <div class="search-header-background-left"></div>
+      <section class="search-header-menu-section">
+        <ol class="search-header-menu-list">
+          <!--TODO-->
+          <li class="search-header-menu-item">День/Ночь</li>
+          <li class="search-header-menu-item">Язык</li>
+          <li class="search-header-menu-item">Страна</li>
+          <li class="search-header-menu-item">Валюта</li>
+        </ol>
+      </section>
+      <div class="search-header-background-right"></div>
     </header>
-    <div class="search-header-background-right search-header-background"></div>
     
-    <div class="search-main-background-left"></div>
-    
+   
     <main class="search-main">
+      <div class="search-main-background-left"></div>
       <section class="search-section">
         <div class="before-search-area"></div>
-        <h1>Поиск авиабилетов</h1>
-  <!--
-        <h2>Умный поиск билетов</h2>
-  -->
-        <div class="search-main-controls">
-          <p class="departure-point-prefix-text">Откуда</p>
-          <input type="text" class="departure-point-input" placeholder="Откуда"></input>
-          
-          <p class="arrival-point-prefix-text">Куда</p>
-          <input type="text" class="arrival-point-input" placeholder="Куда"></input>
-          
-          <p class="departure-date-prefix-text">Туда</p>
-          <input type="text" class="departure-date-input" placeholder="Туда"></input>
-          
-          <p class="arrival-date-prefix-text">Обратно</p>
-          <input type="text" class="arrival-date-input" placeholder="Обратно"></input>
-          
-          <p class="passengers-and-class-combo-prefix-text">Пассажиры и класс</p>
-          <button type="combo" class="passengers-and-class-combo"></input>
-        </div>
-        <button type="submit" class="search-button">Найти билеты</button>
+        <h1 class="search-intro-header">Поиск авиабилетов</h1>
+        <form class="search-form">
+          <div class="search-main-controls">
+            <label class="departure-point-prefix-text search-primary-input-label">Откуда</label>
+            <div class="departure-point-input-wrapper point-input-wrapper">
+              <input type="text" class="departure-point-input search-primary-input" placeholder="Город или аэропорт" value="Петропавловск-Камчатский">
+              <span class="departure-point-code point-code">PKC</span>
+            </div>
+            
+            <label class="arrival-point-prefix-text search-primary-input-label">Куда</label>
+            <div class="arrival-point-input-wrapper point-input-wrapper">
+              <input type="text" class="arrival-point-input search-primary-input" placeholder="Город или аэропорт">
+              <span class="arrival-point-code point-code">LED</span>
+            </div>
+            
+            <label class="departure-date-prefix-text search-primary-input-label">Туда</label>
+            <input type="text" class="departure-date-input search-primary-input" placeholder="29 сентября, пт">
+            
+            <label class="arrival-date-prefix-text search-primary-input-label">Обратно</label>
+            <input type="text" class="arrival-date-input search-primary-input" placeholder="Обратно">
+            
+            <label class="passengers-and-class-combo-prefix-text search-primary-input-label">Пассажиры и класс</label>
+            <button type="combo" class="passengers-and-class-combo search-primary-input">
+          </div>
+          <button type="submit" class="search-button">Найти билеты</button><!--TODO:иконка: стрелка вправо-->
+        </form>
         <div class="after-search-area"></div>
       </section>
+      <div class="search-main-background-right"></div>
     </main>
-    <div class="search-main-background-right"></div>
     
     <footer class="search-footer">
-
+      <div class="search-footer-background-left"></div>
+      <div class="search-footer-background-right"></div>
     </footer>
   </body>
 

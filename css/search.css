@@ -1,81 +1,113 @@
 :root
 {
     --search-background-color: dodgerblue;
-    --search-text-color: #FFFFFF;
+    --search-text-color: black;
+    --search-secondary-text-color: gray;
+    --search-invert-text-color: white;
+    --search-text-background-color: white;
+    --search-button-background-color: orange;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+  
 .search-body {
-    display: grid;
-    grid-template-columns: 1fr 1330px 1fr;
+    min-width: 1330px;
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Arial",sans-serif;
 }
 
 .search-header,
 .search-main,
 .search-footer {
-    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1330px 1fr;
 }
 
-.search-header-background-left {
+.search-header-background-left,
+.search-main-background-left,
+.search-footer-background-left {
     grid-column: 1 / 2;
 }
 
-.search-header-background-right {
+.search-header-background-right,
+.search-main-background-right,
+.search-footer-background-right {
     grid-column: 3 / 4;
+}
+
+.search-header {
+    color: var(--search-invert-text-color);
+    background-color: var(--search-background-color);
 }
 
 .search-header-background {
     background-color: var(--search-background-color);
 }
 
-.search-header {
-    color: var(--search-text-color);
-    background-color: var(--search-background-color);
+.search-header-menu-section {
+    grid-column: 2 / 3;
+}
+
+.search-header-menu-list {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .search-header li {
     list-style-type: none;
 }
 
-.header-menu-list {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.header-menu-item {
+.search-header-menu-item {
     display: flex;
 }
 
 .search-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.search-section {
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--search-text-color);
+    color: var(--search-invert-text-color);
     background-color: var(--search-background-color);
     height: 100vh;
 }
 
 .search-main-background-left {
-    grid-column: 1 / 2;
     background-color: var(--search-background-color);
 }
 
 .search-main-background-right {
-    grid-column: 3 / 4;
     background-color: var(--search-background-color);
+}
+
+.search-intro-header {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 100px;
 }
 
 /* search controls grid */
 
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+
 .search-main-controls {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 27.5% 27.5% 15% 15% 15%;
     width: 100%;
 }
 
@@ -84,7 +116,7 @@
     grid-column: 1 / 2;
 }
 
-.departure-point-input {
+.departure-point-input-wrapper {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
@@ -94,7 +126,7 @@
     grid-column: 2 / 3;
 }
 
-.arrival-point-input {
+.arrival-point-input-wrapper {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 }
@@ -129,8 +161,56 @@
     grid-column: 5 / 6;
 }
 
+.point-input-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.search-primary-input-label {
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    text-transform: uppercase;
+}
+
+.search-primary-input {
+    font-size: 18px;
+    line-height: 1.75em;
+    padding: 8px 12px;
+}
+
+.departure-point-input,
+.arrival-point-input {
+    width: 100%;
+    padding-right: 58px;
+    text-overflow: ellipsis;
+}
+
+.point-code {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 12px;
+    font-size: .80rem;
+    line-height: 1.75em;
+    padding: 8px 8px;
+    top: 17%;
+    z-index: 2;
+    pointer-events: none;
+    color: var(--search-secondary-text-color);
+    /* выровнять по вертикали, по центру */
+}
+
 .search-button {
     align-self: flex-end;
+    margin-top: 18px;
+    padding: 14px 18px;
+    font-size: 22px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--search-button-background-color);
+    color: var(--search-invert-text-color);
 }
 
 .before-search-area {
