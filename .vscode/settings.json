@@ -3,5 +3,6 @@
         "baseUri": "/avia.html"
     },
     "liveServer.settings.port": 0,
-    "liveServer.settings.CustomBrowser": "chrome"
+    "liveServer.settings.CustomBrowser": "chrome",
+    "editor.tabSize": 2
 }
