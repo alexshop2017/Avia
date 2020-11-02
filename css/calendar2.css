@@ -1,19 +1,39 @@
-.calendar {
+:root {
+    --calendar-text-color: #000000;
+    --calendar-secondary-text-color: #DDDDDD;
+    --calendar-background-color: #FFFFFF;
+    --calendar-inverted-text-color: #FFFFFF;
+    --calendar-box-shadow-color: #CCCCCC;
+    --calendar-selected-color: #0000FF;
+    --calendar-bottom-button-color: #0000FF;
+    --calendar-hover-background-color: lightblue;
+
+}
+
+.calendar
+{
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--calendar-text-color);
+    background-color: var(--calendar-background-color);
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Inter","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 14px;
 }
 
 .calendar-main
 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px #cccccc;
-    padding: 15px 10px;
+    box-shadow: 0 0 10px var(--calendar-box-shadow-color);
+    padding: 25px 30px;
 }
 
 .calendar-months
 {
+    grid-column: 1/3;
     display: flex;
     flex-direction: row;
 }
@@ -25,6 +45,10 @@
     align-items: center;
 }
 
+.calendar-month:first-child {
+    margin-right: 30px;
+}
+
 .calendar-month-days {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -32,28 +56,30 @@
 
 .calendar-month-combo
 {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .calendar-month-list
 {
     border: none;
     outline: none;
+    text-transform: uppercase;
 }
 
-.month-left
+.calendar-weekday
 {
-    padding-right: 5px;
-}
-.month-right
-{
-    padding-left: 5px;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-.day
+.calendar-day
 {
-    width: 30px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid transparent;
     text-align: center;
 }
 
@@ -68,32 +94,29 @@
 
 .day1-selected
 {
-    border: 1px solid #0000FF;
-    background-color: #0000FF;
+    border: 1px solid var(--calendar-selected-color);
+    background-color: var(--calendar-selected-color);
     color: white;
     border-radius: 5px;
-    padding : 5px;
 }
 
 .day-filled:hover
 {
-    background-color: lightblue;
-    border: 1px solid #0000FF;
+    background-color: var(--calendar-hover-background-color);
+    border: 1px solid var(--calendar-selected-color);
     border-radius: 5px;
     padding: 0;
 }
 
-.calendar-bottom-buttons {
-    display: flex;
-    flex-direction: row;
+.button-bottom-left-wrapper
+{
+    grid-column: 1/3;
 }
 
-.button-bottom-wrapper {
-    width: 50%;
-}
-
-.button-bottom-wrapper-right {
-    align-self: flex-end;
+.button-bottom-right-wrapper
+{
+    grid-column: 2/3;
+    text-align: center;
 }
 
 .button-bottom
@@ -103,9 +126,9 @@
     border-top: gray;
     border: 1px solid;
     border-radius: 15px;
-    border-color: blue;
-    color: white;
-    background-color: blue;
+    border-color: var(--calendar-bottom-button-color);
+    color: var(--calendar-inverted-text-color);
+    background-color: var(--calendar-bottom-button-color);
 }
 
 .calendar-button-month
