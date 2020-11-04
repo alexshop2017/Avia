@@ -2,197 +2,191 @@
 <html>
   <head lang="ru">
     <meta charset="utf-8">
-    <link href="css/calendar1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&amp;subset=latin,cyrillic&amp;display=swap">
+    <link rel="stylesheet" href="css/calendar1.css">
     <title>Calendar</title>
   </head>
-  <body>
+  <body class="main">
     <main>
-    <table class="calendar">
-      <tr>
-        <td class="button-month button-month-left"><button>Влево</button></td>
-        <td>
-            <table class="calendar-without-left-right-buttons">
-            <tr class="month-combo">
-                <td>
-                   <label for="month-list-left"></label>
-                   <select class="month-list month-list-left" id="month-list-left">
-                    <!--
-                    https://stackoverflow.com/questions/44805767/creating-a-dropdown-without-using-a-select-box
-                    https://stackoverflow.com/questions/15013559/html-select-field-with-filter
-                    убирание рамки вокруг
-                    https://stackoverflow.com/questions/14639638/how-to-remove-border-of-drop-down-list-css
-                    -->
-                    <optgroup label="2020">
-                      <option value="" selected disabled hidden>ФЕВРАЛЬ 2020</option>
-                      <option value="2">Февраль</option>
-                      <option value="3">Март</option>
-                      <option value="4">Апрель</option>
-                      <option value="5">Май</option>
-                      <option value="6">Июнь</option>
-                      <option value="7">Июль</option>
-                      <option value="8">Август</option>
-                      <option value="9">Сентябрь</option>
-                      <option value="10">Октябрь</option>
-                      <option value="11">Ноябрь</option>
-                      <option value="12">Декабрь</option>
-                    </optgroup>
-                    <optgroup label="2021">
-                        <option value="1">Январь</option>
-                    </optgroup>
-                  </select>
-                </td>
-                <td>
-                    <label for="month-list-right"></label>
-                    <select class="month-list month-list-right" id="month-list-right">
-                        <optgroup label="2020">
-                            <option value="" selected disabled hidden>МАРТ 2020</option>
-                            <option value="3">Март</option>
-                            <option value="4">Апрель</option>
-                            <option value="5">Май</option>
-                            <option value="6">Июнь</option>
-                            <option value="7">Июль</option>
-                            <option value="8">Август</option>
-                            <option value="9">Сентябрь</option>
-                            <option value="10">Октябрь</option>
-                            <option value="11">Ноябрь</option>
-                            <option value="12">Декабрь</option>
-                          </optgroup>
-                          <optgroup label="2021">
-                              <option value="1">Январь</option>
-                              <option value="2">Февраль</option>
-                          </optgroup>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table class="month-days month-left">
-                        <tr>
-                            <td class="weekday">ПН</td>
-                            <td class="weekday">ВТ</td>
-                            <td class="weekday">СР</td>
-                            <td class="weekday">ЧТ</td>
-                            <td class="weekday">ПТ</td>
-                            <td class="weekday">СБ</td>
-                            <td class="weekday">ВС</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled"><div class=today>1</div></td>
-                            <td class="day day-filled">2</td>
-                            <td class="day day-filled">3</td>
-                            <td class="day day-filled">4</td>
-                            <td class="day day-filled">5</td>
-                            <td class="day day-filled">6</td>
-                            <td class="day day-filled">7</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">8</td>
-                            <td class="day day-filled">9</td>
-                            <td class="day day-filled"><div class="day1-selected">10</div></td>
-                            <td class="day day-filled">11</td>
-                            <td class="day day-filled">12</td>
-                            <td class="day day-filled">13</td>
-                            <td class="day day-filled">14</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">15</td>
-                            <td class="day day-filled">16</td>
-                            <td class="day day-filled">17</td>
-                            <td class="day day-filled">18</td>
-                            <td class="day day-filled">19</td>
-                            <td class="day day-filled">20</td>
-                            <td class="day day-filled">21</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">22</td>
-                            <td class="day day-filled">23</td>
-                            <td class="day day-filled">24</td>
-                            <td class="day day-filled">25</td>
-                            <td class="day day-filled">26</td>
-                            <td class="day day-filled">27</td>
-                            <td class="day day-filled">28</td>
-                        </tr>
-                        <tr>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                    <table class="month-days month-right">
-                        <tr>
-                            <td class="weekday">ПН</td>
-                            <td class="weekday">ВТ</td>
-                            <td class="weekday">СР</td>
-                            <td class="weekday">ЧТ</td>
-                            <td class="weekday">ПТ</td>
-                            <td class="weekday">СБ</td>
-                            <td class="weekday">ВС</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">1</td>
-                            <td class="day day-filled">2</td>
-                            <td class="day day-filled">3</td>
-                            <td class="day day-filled">4</td>
-                            <td class="day day-filled">5</td>
-                            <td class="day day-filled">6</td>
-                            <td class="day day-filled">7</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">8</td>
-                            <td class="day day-filled">9</td>
-                            <td class="day day-filled">10</td>
-                            <td class="day day-filled">11</td>
-                            <td class="day day-filled">12</td>
-                            <td class="day day-filled">13</td>
-                            <td class="day day-filled">14</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">15</td>
-                            <td class="day day-filled">16</td>
-                            <td class="day day-filled">17</td>
-                            <td class="day day-filled">18</td>
-                            <td class="day day-filled">19</td>
-                            <td class="day day-filled">20</td>
-                            <td class="day day-filled">21</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">22</td>
-                            <td class="day day-filled">23</td>
-                            <td class="day day-filled">24</td>
-                            <td class="day day-filled">25</td>
-                            <td class="day day-filled">26</td>
-                            <td class="day day-filled">27</td>
-                            <td class="day day-filled">28</td>
-                        </tr>
-                        <tr>
-                            <td class="day day-filled">29</td>
-                            <td class="day day-filled">30</td>
-                            <td class="day day-filled">31</td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                            <td class="day"></td>
-                        </tr>
-                    </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr class="button-bottom">
+        <section class="calendar">
+            <div class="calendar-main">
+                <div class="calendar-months">
+                    <div class="calendar-month">
+                        <div class="calendar-month-combo calendar-month-combo-left">
+                            <label for="calendar-month-list-left"></label>
+                            <select class="calendar-month-list calendar-month-list-left" id="calendar-month-list-left">
+                            <!--
+                            https://stackoverflow.com/questions/44805767/creating-a-dropdown-without-using-a-select-box
+                            https://stackoverflow.com/questions/15013559/html-select-field-with-filter
+                            убирание рамки вокруг
+                            https://stackoverflow.com/questions/14639638/how-to-remove-border-of-drop-down-list-css
+                            -->
+                            <optgroup label="2020">
+                                <option value="" selected disabled hidden>Сентябрь 2020</option>
+                                <option value="2">Февраль</option>
+                                <option value="3">Март</option>
+                                <option value="4">Апрель</option>
+                                <option value="5">Май</option>
+                                <option value="6">Июнь</option>
+                                <option value="7">Июль</option>
+                                <option value="8">Август</option>
+                                <option value="9">Сентябрь</option>
+                                <option value="10">Октябрь</option>
+                                <option value="11">Ноябрь</option>
+                                <option value="12">Декабрь</option>
+                            </optgroup>
+                            <optgroup label="2021">
+                                <option value="1">Январь</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                        <div class="calendar-month-days">
+                            <div class="calendar-weekday"><span>ПН</span></div>
+                            <div class="calendar-weekday"><span>ВТ</span></div>
+                            <div class="calendar-weekday"><span>СР</span></div>
+                            <div class="calendar-weekday"><span>ЧТ</span></div>
+                            <div class="calendar-weekday"><span>ПТ</span></div>
+                            <div class="calendar-weekday"><span>СБ</span></div>
+                            <div class="calendar-weekday"><span>ВС</span></div>
+                            <div class="calendar-day day-filled"><span>1</span></div>
+                            <div class="calendar-day day-filled"><span>2</span></div>
+                            <div class="calendar-day day-filled"><span>3</span></div>
+                            <div class="calendar-day day-filled"><span>4</span></div>
+                            <div class="calendar-day day-filled"><span>5</span></div>
+                            <div class="calendar-day day-filled"><span>6</span></div>
+                            <div class="calendar-day day-filled"><span>7</span></div>
+                            <div class="calendar-day day-filled"><span>8</span></div>
+                            <div class="calendar-day day-filled"><span>9</span></div>
+                            <div class="calendar-day day-filled day1-selected"><span>10</span></div>
+                            <div class="calendar-day day-filled"><span>11</span></div>
+                            <div class="calendar-day day-filled"><span>12</span></div>
+                            <div class="calendar-day day-filled"><span>13</span></div>
+                            <div class="calendar-day day-filled"><span>14</span></div>
+                            <div class="calendar-day day-filled"><span>15</span></div>
+                            <div class="calendar-day day-filled"><span>16</span></div>
+                            <div class="calendar-day day-filled"><span>17</span></div>
+                            <div class="calendar-day day-filled"><span>18</span></div>
+                            <div class="calendar-day day-filled"><span>19</span></div>
+                            <div class="calendar-day day-filled"><span>20</span></div>
+                            <div class="calendar-day day-filled"><span>21</span></div>
+                            <div class="calendar-day day-filled"><span>22</span></div>
+                            <div class="calendar-day day-filled"><span>23</span></div>
+                            <div class="calendar-day day-filled"><span>24</span></div>
+                            <div class="calendar-day day-filled"><span>25</span></div>
+                            <div class="calendar-day day-filled"><span>26</span></div>
+                            <div class="calendar-day day-filled"><span>27</span></div>
+                            <div class="calendar-day day-filled"><span>28</span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                            <div class="calendar-day"><span></span></div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-month">
+                        <div class="calendar-month-combo calendar-month-combo-right">
+                            <label for="calendar-month-list-right"></label>
+                            <select class="calendar-month-list calendar-month-list-right" id="calendar-month-list-right">
+                                <optgroup label="2020">
+                                    <option value="" selected disabled hidden>Март 2020</option>
+                                    <option value="3">Март</option>
+                                    <option value="4">Апрель</option>
+                                    <option value="5">Май</option>
+                                    <option value="6">Июнь</option>
+                                    <option value="7">Июль</option>
+                                    <option value="8">Август</option>
+                                    <option value="9">Сентябрь</option>
+                                    <option value="10">Октябрь</option>
+                                    <option value="11">Ноябрь</option>
+                                    <option value="12">Декабрь</option>
+                                    </optgroup>
+                                    <optgroup label="2021">
+                                        <option value="1">Январь</option>
+                                        <option value="2">Февраль</option>
+                                    </optgroup>
+                            </select>
+                        </div>
+                        <div class="calendar-month-days">
+                            <div class="calendar-weekday"><span>ПН</span></div>
+                            <div class="calendar-weekday"><span>ВТ</span></div>
+                            <div class="calendar-weekday"><span>СР</span></div>
+                            <div class="calendar-weekday"><span>ЧТ</span></div>
+                            <div class="calendar-weekday"><span>ПТ</span></div>
+                            <div class="calendar-weekday"><span>СБ</span></div>
+                            <div class="calendar-weekday"><span>ВС</span></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day day-filled"><span>1</span></div>
+                            <div class="calendar-day day-filled"><span>2</span></div>
+                            <div class="calendar-day day-filled"><span>3</span></div>
+                            <div class="calendar-day day-filled"><span>4</span></div>
+                            <div class="calendar-day day-filled"><span>5</span></div>
+                            <div class="calendar-day day-filled"><span>6</span></div>
+                            <div class="calendar-day day-filled"><span>7</span></div>
+                            <div class="calendar-day day-filled"><span>8</span></div>
+                            <div class="calendar-day day-filled"><span>9</span></div>
+                            <div class="calendar-day day-filled"><span>10</span></div>
+                            <div class="calendar-day day-filled"><span>11</span></div>
+                            <div class="calendar-day day-filled"><span>12</span></div>
+                            <div class="calendar-day day-filled"><span>13</span></div>
+                            <div class="calendar-day day-filled"><span>14</span></div>
+                            <div class="calendar-day day-filled"><span>15</span></div>
+                            <div class="calendar-day day-filled"><span>16</span></div>
+                            <div class="calendar-day day-filled"><span>17</span></div>
+                            <div class="calendar-day day-filled"><span>18</span></div>
+                            <div class="calendar-day day-filled"><span>19</span></div>
+                            <div class="calendar-day day-filled"><span>20</span></div>
+                            <div class="calendar-day day-filled"><span>21</span></div>
+                            <div class="calendar-day day-filled"><span>22</span></div>
+                            <div class="calendar-day day-filled"><span>23</span></div>
+                            <div class="calendar-day day-filled"><span>24</span></div>
+                            <div class="calendar-day day-filled"><span>25</span></div>
+                            <div class="calendar-day day-filled"><span>26</span></div>
+                            <div class="calendar-day day-filled"><span>27</span></div>
+                            <div class="calendar-day day-filled"><span>28</span></div>
+                            <div class="calendar-day day-filled"><span>29</span></div>
+                            <div class="calendar-day day-filled"><span>30</span></div>
+                            <div class="calendar-day day-filled"><span>31</span></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- заменить на иконки -->
-                <td><span class="button-bottom button-clear"><button>Задать заново</button></span></td>
-                <td><span class="button-bottom button-finish"><button>Обратный билет не нужен</button></span></td>
-            </tr>
-        </table>
-        </td>
-        <td class="button-month button-month-right"><button>Вправо</button></td>
-      </tr>
-    </table>
+                <div class="button-bottom-wrapper button-bottom-left-wrapper">
+                    <button type="button" class="button-bottom button-clear">Задать заново</button>
+                </div>
+                <div class="button-bottom-wrapper button-bottom-right-wrapper">
+                    <button type="button" class="button-bottom button-finish">Обратный билет не нужен</button>
+                </div>
+            </div>
+
+            <div class="calendar-button-month calendar-button-month-left">
+                <button type="button"><span>&lt;</span></button>
+            </div>
+
+            <div class="calendar-button-month calendar-button-month-right">
+                <button type="button"><span>&gt;</span></button>
+            </div>
+        </section>
     </main>
   </body>
 </html>
