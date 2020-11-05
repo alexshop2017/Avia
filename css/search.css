@@ -196,14 +196,12 @@
 }
 
 .search-main-controls {
+    position: relative;
+    width: 82%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 20% 20% 14% 14% 14% 18%;
-    grid-template-columns: 20% 20% 14% 14% 14% 18%;
-}
-
-.search-main-control {
-    flex-shrink: 1;
+    -ms-grid-columns: 25% 25% 16.7% 16.7% 16.6%;
+    grid-template-columns: 25% 25% 16.7% 16.7% 16.6%;
 }
 
 .search-main-control input,
@@ -252,10 +250,8 @@
 }
 
 .search-button {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 1;
-    grid-column: 6 / 7;
-    margin-left: 6%;
+    width: 18%;
+    margin-left: 0.8%;
 }
 
 .point-input-wrapper {
@@ -289,19 +285,18 @@
 
 .point-code-wrapper {
     position: absolute;
-    background-color: transparent;
-    border: none;
-    right: 12px;
-    padding: auto 0;
-    z-index: 2;
-    pointer-events: none;
     top: 50%;
     transform: translateY(-50%);
+    right: 0.8em;
+    z-index: 2;
+    border: none;
+    pointer-events: none;
+    background-color: transparent;
 }
 
 .point-code {
     vertical-align: middle;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--search-secondary-text-color);
 }
 
@@ -316,6 +311,20 @@
     border-style: none;
     background-color: var(--search-button-background-color);
     color: var(--search-invert-text-color);
+}
+
+.calendar-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*
+    не работает, обрезается правая часть календаря
+    left: 50%;
+    transform: translateX(-50%);
+    */
 }
 
 .before-search-area {
@@ -335,3 +344,4 @@
     -ms-flex-negative: 1;
         flex-shrink: 1;
 }
+
