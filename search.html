@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&amp;subset=latin,cyrillic&amp;display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/calendar1.css">
     <title>Avia</title>
   </head>
 
@@ -14,14 +15,17 @@
     <header class="search-header">
       <!--TODO: Логотип-->
       <div class="search-header-background-left"></div>
-      <section class="search-header-menu-section">
-        <ol class="search-header-menu-list">
-          <!--TODO-->
-          <li class="search-header-menu-item">День/Ночь</li>
-          <li class="search-header-menu-item">Язык</li>
-          <li class="search-header-menu-item">Страна</li>
-          <li class="search-header-menu-item">Валюта</li>
-        </ol>
+      <section class="search-header-section">
+        <div class="search-company-logo"><span>Логотип</span></div>
+        <div class="search-header-menu">
+          <ol class="search-header-menu-list">
+            <!--TODO-->
+            <li class="search-header-menu-item">День/Ночь</li>
+            <li class="search-header-menu-item">Язык</li>
+            <li class="search-header-menu-item">Страна</li>
+            <li class="search-header-menu-item">Валюта</li>
+          </ol>
+        </div>
       </section>
       <div class="search-header-background-right"></div>
     </header>
@@ -32,30 +36,43 @@
       <section class="search-section">
         <div class="before-search-area"></div>
         <h1 class="search-intro-header">Поиск авиабилетов</h1>
+        <p class="search-intro-description">Самый умный сервис по поиску авиабилетов</p>
         <form class="search-form">
           <div class="search-main-controls">
-            <label class="departure-point-prefix-text search-primary-input-label">Откуда</label>
-            <div class="departure-point-input-wrapper point-input-wrapper">
+            
+            <div class="departure-point-input-wrapper point-input-wrapper search-main-control">
               <input type="text" class="departure-point-input search-primary-input" placeholder="Город или аэропорт" value="Петропавловск-Камчатский">
-              <span class="departure-point-code point-code">PKC</span>
+              <div class="point-code-wrapper">
+                <span class="departure-point-code point-code">PKC</span>
+              </div>
+              <label class="departure-point-prefix-text search-primary-input-label">Откуда</label>
             </div>
             
-            <label class="arrival-point-prefix-text search-primary-input-label">Куда</label>
-            <div class="arrival-point-input-wrapper point-input-wrapper">
+            <div class="arrival-point-input-wrapper point-input-wrapper search-main-control">
               <input type="text" class="arrival-point-input search-primary-input" placeholder="Город или аэропорт">
-              <span class="arrival-point-code point-code">LED</span>
+              <div class="point-code-wrapper">
+                <span class="arrival-point-code point-code">LED</span>
+              </div>
+              <label class="arrival-point-prefix-text search-primary-input-label">Куда</label>
             </div>
             
-            <label class="departure-date-prefix-text search-primary-input-label">Туда</label>
-            <input type="text" class="departure-date-input search-primary-input" placeholder="29 сентября, пт">
+            <div class="departure-date-input-wrapper point-input-wrapper search-main-control">
+              <input type="text" class="departure-date-input search-primary-input" placeholder="29 сентября, пт">
+              <label class="departure-date-prefix-text search-primary-input-label">Туда</label>
+            </div>
             
-            <label class="arrival-date-prefix-text search-primary-input-label">Обратно</label>
-            <input type="text" class="arrival-date-input search-primary-input" placeholder="Обратно">
+            <div class="arrival-date-input-wrapper point-input-wrapper search-main-control">
+              <input type="text" class="arrival-date-input search-primary-input" placeholder="Обратно">
+              <label class="arrival-date-prefix-text search-primary-input-label">Обратно</label>
+            </div>
             
-            <label class="passengers-and-class-combo-prefix-text search-primary-input-label">Пассажиры и класс</label>
-            <button type="combo" class="passengers-and-class-combo search-primary-input">
-          </div>
-          <button type="submit" class="search-button">Найти билеты</button><!--TODO:иконка: стрелка вправо-->
+            <div class="passengers-and-class-combo-wrapper point-input-wrapper search-main-control">
+              <input type="" class="passengers-and-class-combo search-primary-input">
+              <label class="passengers-and-class-combo-prefix-text search-primary-input-label">Пассажиры и класс</label>
+            </div>
+
+            <button type="submit" class="search-button search-main-control">Найти билеты</button><!--TODO:иконка: стрелка вправо-->
+            </div>
         </form>
         <div class="after-search-area"></div>
       </section>
