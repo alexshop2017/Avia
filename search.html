@@ -29,14 +29,13 @@
       </section>
       <div class="search-header-background-right"></div>
     </header>
-    
    
     <main class="search-main">
       <div class="search-main-background-left"></div>
       <section class="search-section">
         <div class="before-search-area"></div>
         <h1 class="search-intro-header">Поиск авиабилетов</h1>
-        <p class="search-intro-description">Самый умный сервис по поиску авиабилетов</p>
+        <p class="search-intro-description">Самые дешёвые билеты только у нас</p>
         <form class="search-form">
           <div class="search-main-controls">
             
@@ -104,7 +103,7 @@
                                   </optgroup>
                               </select>
                           </div>
-                          <div class="calendar-month-days">
+                          <div class="calendar-month-days" id="calendar-month-days-left">
                               <div class="calendar-weekday"><span>ПН</span></div>
                               <div class="calendar-weekday"><span>ВТ</span></div>
                               <div class="calendar-weekday"><span>СР</span></div>
@@ -140,7 +139,7 @@
                               <div class="calendar-day calendar-day-filled"><span>26</span></div>
                               <div class="calendar-day calendar-day-filled"><span>27</span></div>
                               <div class="calendar-day calendar-day-filled"><span>28</span></div>
-                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day calendar-day-filled"><span>29</span></div>
                               <div class="calendar-day"><span></span></div>
                               <div class="calendar-day"><span></span></div>
                               <div class="calendar-day"><span></span></div>
@@ -180,7 +179,7 @@
                                       </optgroup>
                               </select>
                           </div>
-                          <div class="calendar-month-days">
+                          <div class="calendar-month-days" id="calendar-month-days-right">
                               <div class="calendar-weekday"><span>ПН</span></div>
                               <div class="calendar-weekday"><span>ВТ</span></div>
                               <div class="calendar-weekday"><span>СР</span></div>
@@ -188,12 +187,12 @@
                               <div class="calendar-weekday"><span>ПТ</span></div>
                               <div class="calendar-weekday"><span>СБ</span></div>
                               <div class="calendar-weekday"><span>ВС</span></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
                               <div class="calendar-day calendar-day-filled"><span>1</span></div>
                               <div class="calendar-day calendar-day-filled"><span>2</span></div>
                               <div class="calendar-day calendar-day-filled"><span>3</span></div>
@@ -225,11 +224,11 @@
                               <div class="calendar-day calendar-day-filled"><span>29</span></div>
                               <div class="calendar-day calendar-day-filled"><span>30</span></div>
                               <div class="calendar-day calendar-day-filled"><span>31</span></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
-                              <div class="calendar-day"></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
+                              <div class="calendar-day"><span></span></div>
                           </div>
                       </div>
                   </div>
@@ -266,6 +265,9 @@
       <div class="search-footer-background-left"></div>
       <div class="search-footer-background-right"></div>
     </footer>
+
+    <script src="js/search-calendar.js"></script>
+
   </body>
 
  </html>
